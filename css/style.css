@@ -88,12 +88,18 @@ body {
   font-family: "proximanovacond-regular", CenturyGothic, AppleGothic,sans-serif;
   font-style: normal;
   font-weight: 300;
-  background: #5d1104;
+  background: #FEDBA3;
 }
 
 a {
   color: #5d1104;
   text-decoration: none;
+}
+a:hover {
+  color: #ba2208;
+}
+a:active {
+  color: #ba2208;
 }
 a:hover, a:focus {
   text-decoration: underline;
@@ -236,29 +242,35 @@ head:hover ~ .container:before, head:hover ~ body .container:before {
   margin-bottom: 1.5rem;
 }
 
-img, iframe {
-  margin: auto;
-  display: block;
-  max-width: 100%;
-  -moz-box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
-  -webkit-box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
-  box-shadow: 0 0 14px rgba(255, 255, 255, 0.5);
-  -moz-border-radius: 5%;
-  -webkit-border-radius: 5%;
-  border-radius: 5%;
-}
-
 #owl-demo .item img {
   display: block;
   width: 100%;
   height: auto;
 }
 
+.container img, iframe {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  -moz-box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+  -webkit-box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.8);
+  -moz-border-radius: 3%;
+  -webkit-border-radius: 3%;
+  border-radius: 3%;
+}
+
 article {
-  margin: 100px 0;
+  padding-top: 81px;
+  padding-top: 4.5rem;
+  padding-bottom: 81px;
+  padding-bottom: 4.5rem;
 }
 article:first-child {
-  margin: 0;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-bottom: 81px;
+  padding-bottom: 4.5rem;
 }
 
 header {
@@ -362,9 +374,13 @@ nav .container ul:after {
   clear: both;
 }
 
+.slider {
+  background: #5d1104;
+}
+
 .services {
-  color: #FEBA31;
-  display: flex;
+  color: #5d1104;
+  background-color: #FEDBA3;
 }
 .services .container div {
   width: 31.25%;
@@ -372,9 +388,9 @@ nav .container ul:after {
   margin-right: 3.125%;
   border: 2px solid rgba(0, 0, 0, 0.3);
   border-radius: 10rem/1rem;
-  -moz-box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(187, 187, 187, 0.3);
-  -webkit-box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(187, 187, 187, 0.3);
-  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(187, 187, 187, 0.3);
+  -moz-box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0 15px rgba(0, 0, 0, 0.7), inset 0 0 10px rgba(0, 0, 0, 0.3);
   padding: 2rem;
 }
 .services .container div:last-child {

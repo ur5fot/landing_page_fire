@@ -23,13 +23,13 @@
 }
 
 body{
-  color: #5d1104;
+  color: $color;
   font-family: "proximanovacond-regular",
 							  CenturyGothic,
 							  AppleGothic,sans-serif;
   font-style: normal;
   font-weight: 300; 
-  background: #5d1104;
+  background: $bg;
   // letter-spacing: 0.1rem;
   
   
@@ -37,7 +37,7 @@ body{
 } 
 
 a{
-  @include link-colors(#5d1104);
+  @include link-colors(#5d1104,#5d1104*2, #5d1104*2);
   @include hover-link;
 }
 
@@ -93,27 +93,27 @@ i{
 	}
 }
 
-
-
-img, iframe{
-	margin: auto;
-	display: block;
-	max-width: 100%;
-	@include box-shadow(0 0 14px rgba(#fff, .5));
-	@include border-radius(5%);
-	
-}
-
 #owl-demo .item img{
     display: block;
     width: 100%;
     height: auto;
 }
 
+.container  img, iframe{
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	@include box-shadow(0 0 14px rgba(#fff, .8));
+	@include border-radius(3%);
+	
+}
+
+
+
 article{
-	margin: 100px 0;
+	@include rhythm-padding(3);
 	&:first-child{
-		margin: 0;
+		@include rhythm-padding(0, 3);
 	}
 }
 
@@ -211,12 +211,16 @@ nav{
 	
 }
 
-// $color FDEE50 FED640 FEBA31
+.slider{
+	background: $slider-bg;
+}
+
+// $color FDEE50 FED640 FEBA31 
 
 .services{
-	$services-color: #FEBA31;
 	color: $services-color;
-	display: flex;
+	// display: flex;
+	background-color: $services-color-bg ;
 
 	.container div{
 
@@ -224,7 +228,7 @@ nav{
 		border: 2px solid rgba(#000, 0.3);
 		border-radius: 10rem/1rem ;
 		@include box-shadow(0px 0 15px  rgba(#000, .7)
-			,inset 0 0 10px rgba(#bbb, .3)
+			,inset 0 0 10px rgba(#000, .3)
 			);
 		padding: 2rem;
 
@@ -232,5 +236,9 @@ nav{
 			@include span(1 last);
 		}
 	}
+}
+
+.portfolio{
+	
 }
 

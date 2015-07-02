@@ -1,0 +1,236 @@
+@import "var"; 
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700&subset=latin,cyrillic-ext,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=Neucha&subset=latin,cyrillic);
+@import url("http://webfonts.ru/import/museo.css");
+/*
+	Museo Sans, 500, 500 italic
+*/
+
+// @import "spr/*.png";
+// @each $name in life, mts, kss, email {
+// 	.#{$name} {@include spr-sprite(#{$name});}
+// }
+
+@font-face{
+	font-family: "proximanovacond-regular";
+	src : url("font/proximanovacond-regular.otf")
+}
+
+*{
+	  @include box-sizing(border-box);
+		@include  transition(.3s);
+	 
+}
+
+body{
+  color: #5d1104;
+  font-family: "proximanovacond-regular",
+							  CenturyGothic,
+							  AppleGothic,sans-serif;
+  font-style: normal;
+  font-weight: 300; 
+  background: #5d1104;
+  // letter-spacing: 0.1rem;
+  
+  
+  
+} 
+
+a{
+  @include link-colors(#5d1104);
+  @include hover-link;
+}
+
+h1 { 
+	@include adjust-font-size-to(3.157rem); 
+	
+		
+	
+	}
+h2 { @include adjust-font-size-to(2.369rem); 
+	&:after{
+		content: "";
+		display: block;
+		width: 150px;
+		height: 1px;
+		background: transparent;
+		margin: 0 auto;
+		@include box-shadow(0 5px 10px  #fff);
+		// @include span(3);
+	}
+}
+h3 { @include adjust-font-size-to(1.777rem); }
+h4 { @include adjust-font-size-to(1.333rem); }
+h5 { @include adjust-font-size-to(1rem); }
+h6 { @include adjust-font-size-to(0.75rem); }
+h1, h2, h3,{
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: center;
+
+}
+h3{
+	@include  margin-leader(1);
+}
+
+i{
+	display: inline-block;
+	height: 16px;
+	width: 16px;
+	// line-height: 32px;
+	vertical-align: middle;
+	margin-right: 10px;
+} 
+
+.container{
+	@include container;
+	>p{
+		 @include adjust-font-size-to(1.333rem); 
+		 text-align: center;	
+		 font-style: italic;
+		 @include margin-trailer(1);
+
+	}
+}
+
+
+
+img, iframe{
+	margin: auto;
+	display: block;
+	max-width: 100%;
+	@include box-shadow(0 0 14px rgba(#fff, .5));
+	@include border-radius(5%);
+	
+}
+
+#owl-demo .item img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+article{
+	margin: 100px 0;
+	&:first-child{
+		margin: 0;
+	}
+}
+
+
+header{
+	height: 196px;
+	background: #ffd189 url("../img/header-bg.png")
+							repeat-x top center;
+	position: relative;
+		text-align: center;
+	h1{
+		font-family: 'Neucha', cursive;
+		@include text-shadow(0px 0px 3px #fff);
+		// border: 2px solid #000;
+		text-transform: uppercase;
+		a{
+			color: #000;
+			text-decoration: none;
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	p{
+	}
+	>.container {
+		div{
+			margin-top: 10px;
+			@include span(2 of 3);
+
+			
+		}
+		ul{
+			margin-top: 5px;
+			@include span(1 of 3 last);
+			text-align: center;
+				vertical-align: middle;
+			@include adjust-font-size-to(1rem);
+		li{
+			 margin: 3px 0px;
+		}
+		@include pie-clearfix;
+		}
+		span{
+			font-style: italic;
+		}
+	}
+}
+
+
+
+nav{
+	// margin-top: 7px;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;  
+	z-index: 99;
+	// @include span(3);
+	background: #460a01 url("../img/nav-bg.png");
+	height: 61px;
+	text-align: center;
+	@include adjust-font-size-to(1rem);
+	@include box-shadow(0px 4px 10px  rgba(#000, .7));
+	.container ul{
+		@include span(3);
+		margin-top: 4px;
+		// display: inline-block;
+		// @include inline-block-list-container;
+		// @include horizontal-list;
+		li{
+			// @include span(1);
+			// @include inline-block-list-item(20px);
+			display: inline-block;
+			// padding: 0 10px;
+		}
+		a{
+			text-align: center;
+			display: block;
+			$lh:57px;
+			height: $lh;
+			width: 150px;
+			color: #fff;
+			line-height: $lh;
+			// padding-left: 20px;
+			// text-transform: uppercase;
+			&:hover{
+				text-decoration: none;
+				background: #763517;
+				@include background-image(linear-gradient(center bottom , rgb(118, 53, 23) 10%, rgb(94, 35, 17) 80%));
+			}
+		}
+		@include pie-clearfix;
+	}
+	
+}
+
+// $color FDEE50 FED640 FEBA31
+
+.services{
+	$services-color: #FEBA31;
+	color: $services-color;
+	display: flex;
+
+	.container div{
+
+		@include span(1);
+		border: 2px solid rgba(#000, 0.3);
+		border-radius: 10rem/1rem ;
+		@include box-shadow(0px 0 15px  rgba(#000, .7)
+			,inset 0 0 10px rgba(#bbb, .3)
+			);
+		padding: 2rem;
+
+		&:last-child{
+			@include span(1 last);
+		}
+	}
+}
+

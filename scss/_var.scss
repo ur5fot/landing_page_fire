@@ -2,7 +2,31 @@
 @import "compass/reset"; 
 @import "susy";
 @import "animate";
-// @import "colors";
+@import "colors/palette8";
+@import "_variables.scss";
+
+// общие настройки wdtnf
+
+$bg: #fedba3; // фон общий
+$color: #5d1104; // текст
+$link-color: $color; //
+$h2-bg-line: $yellow; //
+$header-bg: #ffd189; //
+
+$nav-bg:#460a01;
+
+
+// $slider-bg:#5d1104; 
+ $slider-bg:#5d1104; 
+
+$services-bg: $color4; //
+$services-color: $color; //
+
+$portfolio-bg: $color1;
+$portfolio-color: #fff; 
+
+$order-bg: $color5;
+$order-color:  $color;
 
 $siz:16px ;
 $base-font-size: $siz ;
@@ -42,13 +66,4 @@ $susy: (
   // ) 
 )  ;
 
-// общие настройки
-$bg:#FEDBA3; // фон общий
-$color: #5d1104; // текст
 
-$slider-bg:#5d1104;
-
-$services-color-bg: $bg; //
-$services-color: $color; //
-
-$portfolio-color: #fff; 
